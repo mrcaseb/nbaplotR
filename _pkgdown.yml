@@ -1,4 +1,47 @@
 url: https://mrcaseb.github.io/nbaplotR/
+
+authors:
+  Sebastian Carl:
+    href: https://twitter.com/mrcaseb
+
+home:
+  title: nflplotR • Plot NFL Team Logos
+  description: >
+    A set of functions to visualize National Football
+    League analysis in 'ggplot2'.
+
+navbar:
+  type: dark
+  bg: dark
+  structure:
+    left:  [home, intro, reference, news, articles]
+    right: [github, more]
+  components:
+    reference:
+      text: "Functions"
+      href: reference/index.html
+
 template:
   bootstrap: 5
+  bootswatch: cosmo
+  # theme: arrow-light
+  bslib:
+    font_scale: 1.2
+    base_font: {google: "IBM Plex Sans"}
+    heading_font: {google: "Kanit"}
+    code_font: {google: "Fira Code"}
+  opengraph:
+    twitter:
+      creator: "@mrcaseb"
+      site: "@nflfastR"
+      card: summary_large_image
 
+reference:
+
+- title: Geoms
+  desc: >
+    ggplot2 geoms (geometric objects) that create a `layer()`. A layer combines data,
+    aesthetic mapping, a geom (geometric object), a stat (statistical transformation),
+    and a position adjustment.
+  contents:
+  - starts_with("geom_")
