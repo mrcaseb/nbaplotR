@@ -50,8 +50,6 @@ reference:
   desc: >
     Various helper functions.
   contents:
-  # - ggpreview
-  # - nfl_team_factor
-  # - nfl_team_tiers
+  - clean_team_abbrs
   - valid_team_names
-  # - .nflplotR_clear_cache
+  - ends_with("team_abbr_mapping")
