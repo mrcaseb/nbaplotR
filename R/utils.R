@@ -24,17 +24,19 @@ valid_team_names <- function(league = c("NBA", "WNBA")){
 
 # Extracted from nflreadr and slightly modified
 
-#' Standardize NBA Team Abbreviations
+#' Standardize NBA/WNBA Team Abbreviations
 #'
-#' This function standardizes NBA team abbreviations to ESPN defaults.
+#' This function standardizes NBA/WNBA team abbreviations to ESPN defaults.
 #'
 #' @param abbr a character vector of abbreviations
+#' @param league One of `"NBA"` or `"WNBA"`
 #' @param keep_non_matches If `TRUE` (the default) an element of `abbr` that can't
 #'   be matched to any of the internal mapping vectors will be kept as is. Otherwise
 #'   it will be replaced with `NA`.
 #'
 #' @return A character vector with the length of `abbr` and cleaned team abbreviations
-#'   if they are included in [`team_abbr_mapping`]. Non matches may be replaced
+#'   if they are included in [`nba_team_abbr_mapping`] or [`wnba_team_abbr_mapping`]
+#'   (depending on the value of `league`). Non matches may be replaced
 #'   with `NA` (depending on the value of `keep_non_matches`).
 #' @export
 #' @examples

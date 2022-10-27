@@ -2,7 +2,7 @@
 #'
 #' @description This geom is used to plot NBA team logos instead
 #'   of points in a ggplot. It requires x, y aesthetics as well as a valid NBA
-#'   team abbreviation. The latter can be checked with [`valid_team_names("NBA")`].
+#'   team abbreviation. The latter can be checked with [`valid_team_names()`].
 #'
 #' @inheritParams ggplot2::geom_point
 #' @section Aesthetics:
@@ -10,7 +10,7 @@
 #' \itemize{
 #'   \item{**x**}{ - The x-coordinate.}
 #'   \item{**y**}{ - The y-coordinate.}
-#'   \item{**team_abbr**}{ - The team abbreviation. Should be one of [`valid_team_names("NBA")`]. The function tries to clean team names internally by calling [`nbaplotR::clean_team_abbrs(league = "NBA")`].}
+#'   \item{**team_abbr**}{ - The team abbreviation. Should be one of [`valid_team_names()`]. The function tries to clean team names internally by calling [`nbaplotR::clean_team_abbrs()`].}
 #'   \item{`alpha = NULL`}{ - The alpha channel, i.e. transparency level, as a numerical value between 0 and 1.}
 #'   \item{`colour = NULL`}{ - The image will be colorized with this colour. Use the special character `"b/w"` to set it to black and white. For more information on valid colour names in ggplot2 see <https://ggplot2.tidyverse.org/articles/ggplot2-specs.html?q=colour#colour-and-fill>}
 #'   \item{`angle = 0`}{ - The angle of the image as a numerical value between 0° and 360°.}

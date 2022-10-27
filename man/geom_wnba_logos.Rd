@@ -67,7 +67,7 @@ created with \code{\link[ggplot2:ggplot]{ggplot2::ggplot()}}.
 \description{
 This geom is used to plot WNBA team logos instead
 of points in a ggplot. It requires x, y aesthetics as well as a valid WNBA
-team abbreviation. The latter can be checked with \code{\link{valid_team_names("WNBA")}}.
+team abbreviation. The latter can be checked with \code{\link[=valid_team_names]{valid_team_names()}}.
 }
 \section{Aesthetics}{
 
@@ -75,7 +75,7 @@ team abbreviation. The latter can be checked with \code{\link{valid_team_names("
 \itemize{
 \item{\strong{x}}{ - The x-coordinate.}
 \item{\strong{y}}{ - The y-coordinate.}
-\item{\strong{team_abbr}}{ - The team abbreviation. Should be one of \code{\link{valid_team_names("WNBA")}}. The function tries to clean team names internally by calling \code{\link{clean_team_abbrs(league = "WNBA")}}.}
+\item{\strong{team_abbr}}{ - The team abbreviation. Should be one of \code{\link[=valid_team_names]{valid_team_names()}}. The function tries to clean team names internally by calling \code{\link[=clean_team_abbrs]{clean_team_abbrs()}}.}
 \item{\code{alpha = NULL}}{ - The alpha channel, i.e. transparency level, as a numerical value between 0 and 1.}
 \item{\code{colour = NULL}}{ - The image will be colorized with this colour. Use the special character \code{"b/w"} to set it to black and white. For more information on valid colour names in ggplot2 see \url{https://ggplot2.tidyverse.org/articles/ggplot2-specs.html?q=colour#colour-and-fill}}
 \item{\code{angle = 0}}{ - The angle of the image as a numerical value between 0° and 360°.}
