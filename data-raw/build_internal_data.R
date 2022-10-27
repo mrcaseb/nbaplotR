@@ -3,7 +3,7 @@ teams_colors_logos <- hoopR::espn_nba_teams()
 
 purrr::walk(teams_colors_logos$abbreviation, function(abbr){
   url <- teams_colors_logos$logo[teams_colors_logos$abbreviation == abbr]
-  download.file(url, file.path("inst", paste0(abbr, ".png")))
+  download.file(url, file.path("inst", "NBA", paste0(abbr, ".png")))
 })
 
 primary_colors <- teams_colors_logos$color |>
@@ -16,3 +16,13 @@ usethis::use_data(
   primary_colors, secondary_colors,
   internal = TRUE, overwrite = TRUE
 )
+
+
+# WNBA --------------------------------------------------------------------
+
+wnba_teams <- wehoop::espn_wnba_teams()
+
+purrr::walk(wnba_teams$abbreviation, function(abbr){
+  url <- wnba_teams$logo[wnba_teams$abbreviation == abbr]
+  download.file(url, file.path("inst", "WNBA", paste0(abbr, ".png")))
+})

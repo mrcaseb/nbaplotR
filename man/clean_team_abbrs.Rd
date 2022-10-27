@@ -4,7 +4,7 @@
 \alias{clean_team_abbrs}
 \title{Standardize NBA Team Abbreviations}
 \usage{
-clean_team_abbrs(abbr, keep_non_matches = TRUE)
+clean_team_abbrs(abbr, league = c("NBA", "WNBA"), keep_non_matches = TRUE)
 }
 \arguments{
 \item{abbr}{a character vector of abbreviations}
@@ -22,11 +22,21 @@ with \code{NA} (depending on the value of \code{keep_non_matches}).
 This function standardizes NBA team abbreviations to ESPN defaults.
 }
 \examples{
-x <- c("ALT", "BKN", "BRK", "BROK", "UTAH", "UTA", "UTAA")
+## NBA EXAMPLES ##
+a <- c("ALT", "BKN", "BRK", "BROK", "UTAH", "UTA", "UTAA")
 
 # keep non matches
-nbaplotR::clean_team_abbrs(x)
+nbaplotR::clean_team_abbrs(a)
 
 # replace non matches
-nbaplotR::clean_team_abbrs(x, keep_non_matches = FALSE)
+nbaplotR::clean_team_abbrs(a, keep_non_matches = FALSE)
+
+## WNBA EXAMPLES ##
+b <- c("ALT", "CHI", "DAL", "DALL", "PHX", "SEA")
+
+# keep non matches
+nbaplotR::clean_team_abbrs(b, league = "WNBA")
+
+# replace non matches
+nbaplotR::clean_team_abbrs(b, league = "WNBA", keep_non_matches = FALSE)
 }

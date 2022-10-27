@@ -15,7 +15,8 @@ Imports:
     cli (>= 3.0.0),
     ggpath (>= 1.0.0),
     ggplot2 (>= 3.3.0),
-    grid
+    grid,
+    rlang (>= 0.4.11)
 Suggests: 
     testthat (>= 3.0.0),
     vdiffr

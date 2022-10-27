@@ -1,14 +1,23 @@
-#' Output Valid NAB Team Abbreviations
+#' Output Valid NBA or WNBA Team Abbreviations
 #'
 #' @description The abbreviations used in this function are extracted from ESPN
 #'
+#' @param league One of `"NBA"` or `"WNBA"`
 #' @export
 #' @return A vector of type `"character"`.
 #' @examples
-#' # List valid team abbreviations
-#' valid_team_names()
-valid_team_names <- function(){
-  n <- sort(unique(nbaplotR::team_abbr_mapping))
+#' # List valid NBA team abbreviations
+#' valid_team_names("NBA")
+#'
+#' # List valid WNBA team abbreviations
+#' valid_team_names("WNBA")
+valid_team_names <- function(league = c("NBA", "WNBA")){
+  league <- rlang::arg_match0(league, c("NBA", "WNBA"))
+  map <- switch (league,
+    "NBA" = nbaplotR::nba_team_abbr_mapping,
+    "WNBA" = nbaplotR::wnba_team_abbr_mapping
+  )
+  n <- sort(unique(map))
   n
 }
 
@@ -29,22 +38,42 @@ valid_team_names <- function(){
 #'   with `NA` (depending on the value of `keep_non_matches`).
 #' @export
 #' @examples
-#' x <- c("ALT", "BKN", "BRK", "BROK", "UTAH", "UTA", "UTAA")
+#' ## NBA EXAMPLES ##
+#' a <- c("ALT", "BKN", "BRK", "BROK", "UTAH", "UTA", "UTAA")
 #'
 #' # keep non matches
-#' nbaplotR::clean_team_abbrs(x)
+#' nbaplotR::clean_team_abbrs(a)
 #'
 #' # replace non matches
-#' nbaplotR::clean_team_abbrs(x, keep_non_matches = FALSE)
-clean_team_abbrs <- function(abbr, keep_non_matches = TRUE) {
+#' nbaplotR::clean_team_abbrs(a, keep_non_matches = FALSE)
+#'
+#' ## WNBA EXAMPLES ##
+#' b <- c("ALT", "CHI", "DAL", "DALL", "PHX", "SEA")
+#'
+#' # keep non matches
+#' nbaplotR::clean_team_abbrs(b, league = "WNBA")
+#'
+#' # replace non matches
+#' nbaplotR::clean_team_abbrs(b, league = "WNBA", keep_non_matches = FALSE)
+clean_team_abbrs <- function(abbr,
+                             league = c("NBA", "WNBA"),
+                             keep_non_matches = TRUE) {
   stopifnot(is.character(abbr))
+  league <- rlang::arg_match0(league, c("NBA", "WNBA"))
 
-  m <- nbaplotR::team_abbr_mapping
+  m <- switch (league,
+               "NBA" = nbaplotR::nba_team_abbr_mapping,
+               "WNBA" = nbaplotR::wnba_team_abbr_mapping
+  )
 
   a <- unname(m[toupper(abbr)])
 
   if (any(is.na(a)) && getOption("nbaplotR.verbose", default = interactive())) {
-    cli::cli_warn("Abbreviations not found in {.code nbaplotR::team_abbr_mapping}: {utils::head(abbr[is.na(a)], 10)}")
+    map <- switch (league,
+                   "NBA" = "nbaplotR::nba_team_abbr_mapping",
+                   "WNBA" = "nbaplotR::wnba_team_abbr_mapping"
+    )
+    cli::cli_warn("Abbreviations not found in {.code {map}}: {utils::head(abbr[is.na(a)], 10)}")
   }
 
   if (isTRUE(keep_non_matches)) a <- ifelse(!is.na(a), a, abbr)

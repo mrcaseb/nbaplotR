@@ -1,9 +1,12 @@
-teams_colors_logos <- hoopR::espn_nba_teams()
 
-team_abbr_mapping <-
+# NBA ---------------------------------------------------------------------
+
+nba_teams_colors_logos <- hoopR::espn_nba_teams()
+
+nba_team_abbr_mapping <-
   tibble::tibble(
-    alt = teams_colors_logos$abbreviation,
-    team = teams_colors_logos$abbreviation
+    alt = nba_teams_colors_logos$abbreviation,
+    team = nba_teams_colors_logos$abbreviation
   ) |>
   dplyr::bind_rows(
     # abbreviations as used by basketball reference
@@ -24,4 +27,19 @@ team_abbr_mapping <-
   dplyr::arrange(team) |>
   tibble::deframe()
 
-usethis::use_data(team_abbr_mapping, overwrite = TRUE)
+usethis::use_data(nba_team_abbr_mapping, overwrite = TRUE)
+
+
+# WNBA --------------------------------------------------------------------
+
+wnba_teams_colors_logos <- wehoop::espn_wnba_teams()
+
+wnba_team_abbr_mapping <-
+  tibble::tibble(
+    alt = wnba_teams_colors_logos$abbreviation,
+    team = wnba_teams_colors_logos$abbreviation
+  ) |>
+  dplyr::arrange(team) |>
+  tibble::deframe()
+
+usethis::use_data(wnba_team_abbr_mapping, overwrite = TRUE)

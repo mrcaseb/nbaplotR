@@ -2,9 +2,12 @@
 % Please edit documentation in R/utils.R
 \name{valid_team_names}
 \alias{valid_team_names}
-\title{Output Valid NAB Team Abbreviations}
+\title{Output Valid NBA or WNBA Team Abbreviations}
 \usage{
-valid_team_names()
+valid_team_names(league = c("NBA", "WNBA"))
+}
+\arguments{
+\item{league}{One of \code{"NBA"} or \code{"WNBA"}}
 }
 \value{
 A vector of type \code{"character"}.
@@ -13,6 +16,9 @@ A vector of type \code{"character"}.
 The abbreviations used in this function are extracted from ESPN
 }
 \examples{
-# List valid team abbreviations
-valid_team_names()
+# List valid NBA team abbreviations
+valid_team_names("NBA")
+
+# List valid WNBA team abbreviations
+valid_team_names("WNBA")
 }
