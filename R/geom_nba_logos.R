@@ -10,7 +10,7 @@
 #' \itemize{
 #'   \item{**x**}{ - The x-coordinate.}
 #'   \item{**y**}{ - The y-coordinate.}
-#'   \item{**team_abbr**}{ - The team abbreviation. Should be one of [`valid_team_names()`]. The function tries to clean team names internally by calling [`nflreadr::clean_team_abbrs()`]}
+#'   \item{**team_abbr**}{ - The team abbreviation. Should be one of [`valid_team_names()`].}
 #'   \item{`alpha = NULL`}{ - The alpha channel, i.e. transparency level, as a numerical value between 0 and 1.}
 #'   \item{`colour = NULL`}{ - The image will be colorized with this colour. Use the special character `"b/w"` to set it to black and white. For more information on valid colour names in ggplot2 see <https://ggplot2.tidyverse.org/articles/ggplot2-specs.html?q=colour#colour-and-fill>}
 #'   \item{`angle = 0`}{ - The angle of the image as a numerical value between 0° and 360°.}
@@ -39,8 +39,8 @@
 #' team_abbr <- nbaplotR::valid_team_names()
 #'
 #' df <- data.frame(
-#'   a = rep(1:8, 4),
-#'   b = sort(rep(1:4, 8), decreasing = TRUE),
+#'   a = rep(1:6, 5),
+#'   b = sort(rep(1:5, 6), decreasing = TRUE),
 #'   teams = team_abbr
 #' )
 #'
@@ -52,7 +52,7 @@
 #'
 #' # scatterplot of all logos
 #' ggplot(df, aes(x = a, y = b)) +
-#'   geom_nfl_logos(aes(team_abbr = teams), width = 0.075) +
+#'   geom_nba_logos(aes(team_abbr = teams), width = 0.075) +
 #'   geom_label(aes(label = teams), nudge_y = -0.35, alpha = 0.5) +
 #'   theme_void()
 #'

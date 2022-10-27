@@ -13,7 +13,8 @@ Imports:
     ggplot2 (>= 3.3.0),
     grid
 Suggests: 
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    vdiffr
 Config/testthat/edition: 3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

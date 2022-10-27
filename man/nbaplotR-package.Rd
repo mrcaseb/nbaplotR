@@ -25,7 +25,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Sebastian Carl \email{mrcaseb@gmail.com} (\href{https://orcid.org/YOUR-ORCID-ID}{ORCID})
+\strong{Maintainer}: Sebastian Carl \email{mrcaseb@gmail.com}
 
 }
 \keyword{datasets}
