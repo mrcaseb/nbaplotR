@@ -9,11 +9,12 @@
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/nbaplotR)](https://CRAN.R-project.org/package=nbaplotR)
+[![R-CMD-check](https://github.com/mrcaseb/nbaplotR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/mrcaseb/nbaplotR/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-The goal of nflplotR is to provide functions and geoms that help
-visualization of NFL related analysis. It provides a ggplot2 geom that
-does the heavy lifting of plotting NFL logos in high quality, with
+The goal of nbaplotR is to provide functions and geoms that help
+visualization of NBA related analysis. It provides a ggplot2 geom that
+does the heavy lifting of plotting NBA logos in high quality, with
 correct aspect ratio and possible transparency.
 
 ## Installation
