@@ -13,9 +13,9 @@ status](https://www.r-pkg.org/badges/version/nbaplotR)](https://CRAN.R-project.o
 <!-- badges: end -->
 
 The goal of nbaplotR is to provide functions and geoms that help
-visualization of NBA related analysis. It provides a ggplot2 geom that
-does the heavy lifting of plotting NBA logos in high quality, with
-correct aspect ratio and possible transparency.
+visualization of NBA/WNBA related analysis. It provides a ggplot2 geom
+that does the heavy lifting of plotting NBA/WNBA logos in high quality,
+with correct aspect ratio and possible transparency.
 
 ## Installation
 

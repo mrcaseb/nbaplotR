@@ -21,7 +21,7 @@ knitr::opts_chunk$set(
 [![R-CMD-check](https://github.com/mrcaseb/nbaplotR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/mrcaseb/nbaplotR/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-The goal of nbaplotR is to provide functions and geoms that help visualization of NBA related analysis. It provides a ggplot2 geom that does the heavy lifting of plotting NBA logos in high quality, with correct aspect ratio and possible transparency.
+The goal of nbaplotR is to provide functions and geoms that help visualization of NBA/WNBA related analysis. It provides a ggplot2 geom that does the heavy lifting of plotting NBA/WNBA logos in high quality, with correct aspect ratio and possible transparency.
 
 ## Installation
 
