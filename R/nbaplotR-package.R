@@ -2,6 +2,7 @@
 "_PACKAGE"
 
 ## usethis namespace: start
+#' @import cli
 #' @import ggpath
 #' @import grid
 ## usethis namespace: end
