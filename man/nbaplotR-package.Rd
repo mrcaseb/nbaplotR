@@ -5,18 +5,27 @@
 \alias{GeomNBAlogo}
 \alias{nbaplotR}
 \alias{nbaplotR-package}
-\title{nbaplotR: What the Package Does (One Line, Title Case)}
+\title{nbaplotR: NBA Logo Plots in 'ggplot2'}
 \format{
-An object of class \code{GeomNFLlogo} (inherits from \code{Geom}, \code{ggproto}, \code{gg}) of length 5.
+An object of class \code{GeomNBAlogo} (inherits from \code{Geom}, \code{ggproto}, \code{gg}) of length 5.
 }
 \usage{
 GeomNBAlogo
 }
 \description{
-What the package does (one paragraph).
+A set of functions to visualize National Basketball League analysis in 'ggplot2'.
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/mrcaseb/nbaplotR}
+  \item \url{https://mrcaseb.github.io/nbaplotR/}
+  \item Report bugs at \url{https://github.com/mrcaseb/nbaplotR/issues}
+}
+
 }
 \author{
-\strong{Maintainer}: First Last \email{first.last@example.com} (\href{https://orcid.org/YOUR-ORCID-ID}{ORCID})
+\strong{Maintainer}: Sebastian Carl \email{mrcaseb@gmail.com} (\href{https://orcid.org/YOUR-ORCID-ID}{ORCID})
 
 }
 \keyword{datasets}

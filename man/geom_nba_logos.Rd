@@ -98,8 +98,6 @@ library(nbaplotR)
 library(ggplot2)
 
 team_abbr <- valid_team_names()
-# remove conference logos from this example
-team_abbr <- team_abbr[!team_abbr \%in\% c("AFC", "NFC", "NFL")]
 
 df <- data.frame(
   a = rep(1:8, 4),
@@ -123,7 +121,7 @@ ggplot(df, aes(x = a, y = b)) +
 # please note that you have to add scale_alpha_identity() to use the alpha
 # values in your dataset!
 ggplot(df, aes(x = a, y = b)) +
-  geom_nfl_logos(aes(team_abbr = teams, alpha = alpha), width = 0.075) +
+  geom_nba_logos(aes(team_abbr = teams, alpha = alpha), width = 0.075) +
   geom_label(aes(label = teams), nudge_y = -0.35, alpha = 0.5) +
   scale_alpha_identity() +
   theme_void()
@@ -132,7 +130,7 @@ ggplot(df, aes(x = a, y = b)) +
 # please note that you have to add scale_alpha_identity() as well as
 # scale_color_identity() to use the alpha and colour values in your dataset!
 ggplot(df, aes(x = a, y = b)) +
-  geom_nfl_logos(aes(team_abbr = teams, alpha = alpha, colour = colour), width = 0.075) +
+  geom_nba_logos(aes(team_abbr = teams, alpha = alpha, colour = colour), width = 0.075) +
   geom_label(aes(label = teams), nudge_y = -0.35, alpha = 0.5) +
   scale_alpha_identity() +
   scale_color_identity() +
@@ -140,16 +138,9 @@ ggplot(df, aes(x = a, y = b)) +
 
 # apply alpha as constant for all logos
 ggplot(df, aes(x = a, y = b)) +
-  geom_nfl_logos(aes(team_abbr = teams), width = 0.075, alpha = 0.6) +
+  geom_nba_logos(aes(team_abbr = teams), width = 0.075, alpha = 0.6) +
   geom_label(aes(label = teams), nudge_y = -0.35, alpha = 0.5) +
   theme_void()
 
-# it's also possible to plot conference logos
-conf <- data.frame(a = 1:2, b = 0, teams = c("AFC", "NFC"))
-ggplot(conf, aes(x = a, y = b)) +
-  geom_nfl_logos(aes(team_abbr = teams), width = 0.3) +
-  geom_label(aes(label = teams), nudge_y = -0.4, alpha = 0.5) +
-  coord_cartesian(xlim = c(0.5,2.5), ylim = c(-0.75,.75)) +
-  theme_void()
 }
 }
