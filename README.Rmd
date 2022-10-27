@@ -20,37 +20,19 @@ knitr::opts_chunk$set(
 [![CRAN status](https://www.r-pkg.org/badges/version/nbaplotR)](https://CRAN.R-project.org/package=nbaplotR)
 <!-- badges: end -->
 
-The goal of nbaplotR is to ...
+The goal of nflplotR is to provide functions and geoms that help visualization of NFL related analysis. It provides a ggplot2 geom that does the heavy lifting of plotting NFL logos in high quality, with correct aspect ratio and possible transparency.
 
 ## Installation
 
-You can install the development version of nbaplotR like so:
+<!-- The easiest way to get nbaplotR is to install it from [CRAN](https://cran.r-project.org/package=nbaplotR) with: -->
+
+<!-- ``` r -->
+<!-- install.packages("nbaplotR") -->
+<!-- ``` -->
+
+To get a bug fix or to use a feature from the development version, you can install the development version of nbaplotR either from [GitHub](https://github.com/mrcaseb/nbaplotR/) with:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+if (!require("pak")) install.packages("pak")
+pak::pak("mrcaseb/nbaplotR")
 ```
-
-## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-```{r example}
-library(nbaplotR)
-## basic example code
-```
-
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
-
-```{r cars}
-summary(cars)
-```
-
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. You could also use GitHub Actions to re-render `README.Rmd` every time you push. An example workflow can be found here: <https://github.com/r-lib/actions/tree/v1/examples>.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
