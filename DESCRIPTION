@@ -19,5 +19,6 @@ Config/testthat/edition: 3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.1
-URL: https://github.com/mrcaseb/nbaplotR
+URL: https://github.com/mrcaseb/nbaplotR,
+    https://mrcaseb.github.io/nbaplotR/
 BugReports: https://github.com/mrcaseb/nbaplotR/issues
