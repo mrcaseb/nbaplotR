@@ -3,3 +3,5 @@
 export(GeomNBAlogo)
 export(geom_nba_logos)
 export(valid_team_names)
+import(ggpath)
+import(grid)

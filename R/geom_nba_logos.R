@@ -36,7 +36,7 @@
 #' library(nbaplotR)
 #' library(ggplot2)
 #'
-#' team_abbr <- valid_team_names()
+#' team_abbr <- nbaplotR::valid_team_names()
 #'
 #' df <- data.frame(
 #'   a = rep(1:8, 4),

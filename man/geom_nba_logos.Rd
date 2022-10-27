@@ -97,7 +97,7 @@ A typical size is \code{height = 0.1} (see below examples).}
 library(nbaplotR)
 library(ggplot2)
 
-team_abbr <- valid_team_names()
+team_abbr <- nbaplotR::valid_team_names()
 
 df <- data.frame(
   a = rep(1:8, 4),
