@@ -5,9 +5,9 @@ authors:
     href: https://twitter.com/mrcaseb
 
 home:
-  title: nflplotR • Plot NFL Team Logos
+  title: nbaplotR • Plot NBA Team Logos
   description: >
-    A set of functions to visualize National Football
+    A set of functions to visualize National Basketball
     League analysis in 'ggplot2'.
 
 navbar:
