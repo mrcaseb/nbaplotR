@@ -46,6 +46,15 @@ reference:
   contents:
   - starts_with("geom_")
 
+- title: Scales
+  desc: >
+    Scales control the details of how data values are translated to visual
+    properties. Override the default scales to tweak details like the axis
+    labels or legend keys, or to use a completely different translation from
+    data to aesthetic.
+  contents:
+  - starts_with("scale")
+
 - title: Utilities
   desc: >
     Various helper functions.
