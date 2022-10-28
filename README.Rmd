@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# nbaplotR
+# nbaplotR <a href='https://mrcaseb.github.io/nbaplotR/'><img src='man/figures/logo.png' align="right" width="25%" min-width="120px" /></a>
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
