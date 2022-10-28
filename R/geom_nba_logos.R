@@ -119,9 +119,9 @@ GeomNBAlogo <- ggplot2::ggproto(
 
     league <- match.arg(league)
 
-    data$team_abbr <- clean_team_abbrs(as.character(data$team_abbr), league = league, keep_non_matches = FALSE)
+    team_abbr <- clean_team_abbrs(as.character(data$team_abbr), league = league, keep_non_matches = FALSE)
 
-    data$path <- system.file(paste0(league, "/", data$team_abbr, ".png"), package = "nbaplotR")
+    data$path <- logo_from_abbr(team_abbr, league = league)
 
     ggpath::GeomFromPath$draw_panel(
       data = data,

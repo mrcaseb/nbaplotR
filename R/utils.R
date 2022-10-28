@@ -82,3 +82,8 @@ clean_team_abbrs <- function(abbr,
 
   a
 }
+
+# internal helper that outputs local path to logo files
+logo_from_abbr <- function(abbr, league = c("NBA", "WNBA")){
+  system.file(paste0(league, "/", abbr, ".png"), package = "nbaplotR")
+}

@@ -55,6 +55,14 @@ reference:
   contents:
   - starts_with("scale")
 
+- title: Theme Elements
+  desc: >
+    Themes control the display of all non-data elements of the plot. Theme elements
+    can tweak individual settings inside `theme()`.
+  contents:
+  - starts_with("element")
+  - starts_with("theme")
+
 - title: Utilities
   desc: >
     Various helper functions.
