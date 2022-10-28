@@ -110,6 +110,4 @@ ggplot(df, aes(y = team, x = random_value)) +
 \seealso{
 \code{\link[=geom_nba_logos]{geom_nba_logos()}}, \code{\link[=geom_wnba_logos]{geom_wnba_logos()}}, and \code{\link[ggpath:element_path]{ggpath::element_path()}}
 for more information on valid team abbreviations, and other parameters.
-
-The examples on \url{https://nflplotr.nflverse.com/articles/nflplotR.html}
 }

@@ -16,6 +16,8 @@
 #'   If `NA` (the default) no transparency will be applied. Can also be a vector of
 #'   alphas. All alpha levels must be in range `[0,1]`.
 #' @name scale_nba
+#' @seealso The theme elements [element_nba_logo()] and [element_wnba_logo()] to
+#'   replace axis text labels with logos.
 #' @aliases NULL
 #' @examples
 #' \donttest{

@@ -191,3 +191,7 @@ ggplot(df, aes(x = teams, y = random_value)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 }
 }
+\seealso{
+The theme elements \code{\link[=element_nba_logo]{element_nba_logo()}} and \code{\link[=element_wnba_logo]{element_wnba_logo()}} to
+replace axis text labels with logos.
+}

@@ -12,7 +12,6 @@
 #'
 #' @seealso [geom_nba_logos()], [geom_wnba_logos()], and [ggpath::element_path()]
 #'   for more information on valid team abbreviations, and other parameters.
-#' @seealso The examples on <https://nflplotr.nflverse.com/articles/nflplotR.html>
 #' @return An S3 object of class `element`.
 #' @examples
 #' \donttest{
