@@ -85,5 +85,16 @@ clean_team_abbrs <- function(abbr,
 
 # internal helper that outputs local path to logo files
 logo_from_abbr <- function(abbr, league = c("NBA", "WNBA")){
-  system.file(paste0(league, "/", abbr, ".png"), package = "nbaplotR")
+  img_vctr <- paste0(league, "/", abbr, ".png")
+  # This used to call the following system.file line
+  # but it drops non matches which results in errors
+  # system.file(img_vctr, package = "nbaplotR")
+
+  # Now we use some code from system.file but keep the non matches
+  packagePath <- find.package("nbaplotR", quiet = TRUE)
+  img_files <- file.path(packagePath, img_vctr)
+  present <- file.exists(img_files)
+  img_files[!present] <- img_vctr[!present]
+
+  img_files
 }

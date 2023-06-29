@@ -13,6 +13,8 @@ An object of class \code{GeomNBAlogo} (inherits from \code{Geom}, \code{ggproto}
 GeomNBAlogo
 }
 \description{
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
+
 A set of functions to visualize National Basketball League analysis in 'ggplot2'.
 }
 \seealso{
