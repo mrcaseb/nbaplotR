@@ -58,6 +58,13 @@ reference:
   contents:
   - starts_with("scale")
 
+- title: Tables
+  desc: >
+    Utility functions that work with the gt package to create html tables.
+  contents:
+  - starts_with("gt_nba")
+  - starts_with("gt_")
+
 - title: Theme Elements
   desc: >
     Themes control the display of all non-data elements of the plot. Theme elements

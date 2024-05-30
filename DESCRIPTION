@@ -1,6 +1,6 @@
 Package: nbaplotR
-Title: NBA Logo Plots in 'ggplot2'
-Version: 0.0.4
+Title: NBA Logo Plots in 'ggplot2' and 'gt'
+Version: 0.1.0
 Authors@R: 
     person("Sebastian", "Carl", , "mrcaseb@gmail.com", role = c("aut", "cre"))
 Description: A set of functions to visualize National Basketball League
@@ -16,6 +16,7 @@ Imports:
     ggpath (>= 1.0.0),
     ggplot2 (>= 3.3.0),
     grid,
+    gt (>= 0.8.0), 
     rlang (>= 0.4.11),
     scales (>= 1.1.0)
 Suggests: 
@@ -25,4 +26,4 @@ Config/testthat/edition: 3
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.1

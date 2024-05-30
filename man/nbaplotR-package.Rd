@@ -3,7 +3,6 @@
 \docType{data}
 \name{GeomNBAlogo}
 \alias{GeomNBAlogo}
-\alias{nbaplotR}
 \alias{nbaplotR-package}
 \title{nbaplotR: NBA Logo Plots in 'ggplot2'}
 \format{
