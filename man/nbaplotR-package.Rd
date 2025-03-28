@@ -4,7 +4,7 @@
 \name{GeomNBAlogo}
 \alias{GeomNBAlogo}
 \alias{nbaplotR-package}
-\title{nbaplotR: NBA Logo Plots in 'ggplot2'}
+\title{nbaplotR: NBA Logo Plots in 'ggplot2' and 'gt'}
 \format{
 An object of class \code{GeomNBAlogo} (inherits from \code{Geom}, \code{ggproto}, \code{gg}) of length 5.
 }

@@ -32,8 +32,11 @@ special character \code{"b/w"} to set it to black and white. For more informatio
 on valid color names in ggplot2 see
 \url{https://ggplot2.tidyverse.org/articles/ggplot2-specs.html?q=colour#colour-and-fill}.}
 
-\item{hjust, vjust}{The horizontal and vertical adjustment respectively.
-Must be a numerical value between 0 and 1.}
+\item{hjust}{A numeric vector specifying horizontal justification.
+    If specified, overrides the \code{just} setting.}
+
+\item{vjust}{A numeric vector specifying vertical justification.
+    If specified, overrides the \code{just} setting.}
 
 \item{size}{The output grob size in \code{cm} (!).}
 }
