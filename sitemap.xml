@@ -1,60 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://mrcaseb.github.io/nbaplotR/404.html</loc>
-  </url>
-  <url>
-    <loc>https://mrcaseb.github.io/nbaplotR/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://mrcaseb.github.io/nbaplotR/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://mrcaseb.github.io/nbaplotR/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://mrcaseb.github.io/nbaplotR/index.html</loc>
-  </url>
-  <url>
-    <loc>https://mrcaseb.github.io/nbaplotR/news/index.html</loc>
-  </url>
-  <url>
-    <loc>https://mrcaseb.github.io/nbaplotR/reference/clean_team_abbrs.html</loc>
-  </url>
-  <url>
-    <loc>https://mrcaseb.github.io/nbaplotR/reference/element.html</loc>
-  </url>
-  <url>
-    <loc>https://mrcaseb.github.io/nbaplotR/reference/geom_nba_logos.html</loc>
-  </url>
-  <url>
-    <loc>https://mrcaseb.github.io/nbaplotR/reference/geom_wnba_logos.html</loc>
-  </url>
-  <url>
-    <loc>https://mrcaseb.github.io/nbaplotR/reference/gt_nba_cols_label.html</loc>
-  </url>
-  <url>
-    <loc>https://mrcaseb.github.io/nbaplotR/reference/gt_nba_logos.html</loc>
-  </url>
-  <url>
-    <loc>https://mrcaseb.github.io/nbaplotR/reference/gt_wnba_logos.html</loc>
-  </url>
-  <url>
-    <loc>https://mrcaseb.github.io/nbaplotR/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://mrcaseb.github.io/nbaplotR/reference/nba_team_abbr_mapping.html</loc>
-  </url>
-  <url>
-    <loc>https://mrcaseb.github.io/nbaplotR/reference/nbaplotR-package.html</loc>
-  </url>
-  <url>
-    <loc>https://mrcaseb.github.io/nbaplotR/reference/scale_nba.html</loc>
-  </url>
-  <url>
-    <loc>https://mrcaseb.github.io/nbaplotR/reference/valid_team_names.html</loc>
-  </url>
-  <url>
-    <loc>https://mrcaseb.github.io/nbaplotR/reference/wnba_team_abbr_mapping.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://mrcaseb.github.io/nbaplotR/404.html</loc></url>
+<url><loc>https://mrcaseb.github.io/nbaplotR/LICENSE-text.html</loc></url>
+<url><loc>https://mrcaseb.github.io/nbaplotR/LICENSE.html</loc></url>
+<url><loc>https://mrcaseb.github.io/nbaplotR/authors.html</loc></url>
+<url><loc>https://mrcaseb.github.io/nbaplotR/index.html</loc></url>
+<url><loc>https://mrcaseb.github.io/nbaplotR/news/index.html</loc></url>
+<url><loc>https://mrcaseb.github.io/nbaplotR/reference/clean_team_abbrs.html</loc></url>
+<url><loc>https://mrcaseb.github.io/nbaplotR/reference/element.html</loc></url>
+<url><loc>https://mrcaseb.github.io/nbaplotR/reference/geom_nba_logos.html</loc></url>
+<url><loc>https://mrcaseb.github.io/nbaplotR/reference/geom_wnba_logos.html</loc></url>
+<url><loc>https://mrcaseb.github.io/nbaplotR/reference/gt_nba_cols_label.html</loc></url>
+<url><loc>https://mrcaseb.github.io/nbaplotR/reference/gt_nba_logos.html</loc></url>
+<url><loc>https://mrcaseb.github.io/nbaplotR/reference/gt_wnba_logos.html</loc></url>
+<url><loc>https://mrcaseb.github.io/nbaplotR/reference/index.html</loc></url>
+<url><loc>https://mrcaseb.github.io/nbaplotR/reference/nba_team_abbr_mapping.html</loc></url>
+<url><loc>https://mrcaseb.github.io/nbaplotR/reference/nbaplotR-package.html</loc></url>
+<url><loc>https://mrcaseb.github.io/nbaplotR/reference/scale_nba.html</loc></url>
+<url><loc>https://mrcaseb.github.io/nbaplotR/reference/valid_team_names.html</loc></url>
+<url><loc>https://mrcaseb.github.io/nbaplotR/reference/wnba_team_abbr_mapping.html</loc></url>
 </urlset>
+
