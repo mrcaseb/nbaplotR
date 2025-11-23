@@ -85,6 +85,8 @@ clean_team_abbrs <- function(abbr,
 
 # internal helper that outputs local path to logo files
 logo_from_abbr <- function(abbr, league = c("NBA", "WNBA")){
+  # The file .../CON.png caused problems so we manually rename it to CONN here
+  abbr <- ifelse(abbr == "CON", "CONN", abbr)
   img_vctr <- paste0(league, "/", abbr, ".png")
   # This used to call the following system.file line
   # but it drops non matches which results in errors

@@ -19,6 +19,8 @@ wnba_teams <- wehoop::espn_wnba_teams()
 
 purrr::walk(wnba_teams$abbreviation, function(abbr){
   url <- wnba_teams$logo[wnba_teams$abbreviation == abbr]
+  # The file .../CON.png caused problems so we manually rename it to CONN here
+  abbr <- ifelse(abbr == "CON", "CONN", abbr)
   download.file(url, file.path("inst", "WNBA", paste0(abbr, ".png")))
 })
 

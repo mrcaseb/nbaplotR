@@ -38,7 +38,7 @@ from a \code{formula} (e.g. \code{~ head(.x, 10)}).}
 
 \item{stat}{The statistical transformation to use on the data for this layer.
 When using a \verb{geom_*()} function to construct a layer, the \code{stat}
-argument can be used the override the default coupling between geoms and
+argument can be used to override the default coupling between geoms and
 stats. The \code{stat} argument accepts the following:
 \itemize{
 \item A \code{Stat} ggproto subclass, for example \code{StatCount}.
@@ -73,12 +73,14 @@ a warning. If \code{TRUE}, missing values are silently removed.}
 \code{NA}, the default, includes if any aesthetics are mapped.
 \code{FALSE} never includes, and \code{TRUE} always includes.
 It can also be a named logical vector to finely select the aesthetics to
-display.}
+display. To include legend keys for all levels, even
+when no data exists, use \code{TRUE}.  If \code{NA}, all levels are shown in legend,
+but unobserved levels are omitted.}
 
 \item{inherit.aes}{If \code{FALSE}, overrides the default aesthetics,
 rather than combining with them. This is most useful for helper functions
 that define both data and aesthetics and shouldn't inherit behaviour from
-the default plot specification, e.g. \code{\link[ggplot2:borders]{borders()}}.}
+the default plot specification, e.g. \code{\link[ggplot2:annotation_borders]{annotation_borders()}}.}
 }
 \value{
 A ggplot2 layer (\code{\link[ggplot2:layer]{ggplot2::layer()}}) that can be added to a plot
@@ -134,7 +136,12 @@ df$colour <- ifelse(matches, NA, "gray")
 # scatterplot of all logos
 ggplot(df, aes(x = a, y = b)) +
   geom_nba_logos(aes(team_abbr = teams), width = 0.075) +
-  geom_label(aes(label = teams), nudge_y = -0.35, alpha = 0.5) +
+  geom_label(
+    aes(label = teams),
+    nudge_y = -0.35,
+    alpha = 0.5,
+    fill = "transparent"
+  ) +
   theme_void()
 
 # apply alpha via an aesthetic from inside the dataset `df`
@@ -142,7 +149,12 @@ ggplot(df, aes(x = a, y = b)) +
 # values in your dataset!
 ggplot(df, aes(x = a, y = b)) +
   geom_nba_logos(aes(team_abbr = teams, alpha = alpha), width = 0.075) +
-  geom_label(aes(label = teams), nudge_y = -0.35, alpha = 0.5) +
+  geom_label(
+    aes(label = teams),
+    nudge_y = -0.35,
+    alpha = 0.5,
+    fill = "transparent"
+  ) +
   scale_alpha_identity() +
   theme_void()
 
@@ -150,8 +162,16 @@ ggplot(df, aes(x = a, y = b)) +
 # please note that you have to add scale_alpha_identity() as well as
 # scale_color_identity() to use the alpha and colour values in your dataset!
 ggplot(df, aes(x = a, y = b)) +
-  geom_nba_logos(aes(team_abbr = teams, alpha = alpha, colour = colour), width = 0.075) +
-  geom_label(aes(label = teams), nudge_y = -0.35, alpha = 0.5) +
+  geom_nba_logos(
+    aes(team_abbr = teams, alpha = alpha, colour = colour),
+    width = 0.075
+  ) +
+  geom_label(
+    aes(label = teams),
+    nudge_y = -0.35,
+    alpha = 0.5,
+    fill = "transparent"
+  ) +
   scale_alpha_identity() +
   scale_color_identity() +
   theme_void()
@@ -159,8 +179,12 @@ ggplot(df, aes(x = a, y = b)) +
 # apply alpha as constant for all logos
 ggplot(df, aes(x = a, y = b)) +
   geom_nba_logos(aes(team_abbr = teams), width = 0.075, alpha = 0.6) +
-  geom_label(aes(label = teams), nudge_y = -0.35, alpha = 0.5) +
+  geom_label(
+    aes(label = teams),
+    nudge_y = -0.35,
+    alpha = 0.5,
+    fill = "transparent"
+  ) +
   theme_void()
-
 }
 }
