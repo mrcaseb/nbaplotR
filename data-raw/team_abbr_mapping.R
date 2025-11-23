@@ -39,6 +39,12 @@ wnba_team_abbr_mapping <-
     alt = wnba_teams_colors_logos$abbreviation,
     team = wnba_teams_colors_logos$abbreviation
   ) |>
+  dplyr::bind_rows(
+    tibble::tribble(
+      ~team, ~alt,
+      "CON", "CONN"
+    )
+  ) |>
   dplyr::arrange(team) |>
   tibble::deframe()
 
