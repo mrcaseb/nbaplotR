@@ -120,10 +120,11 @@ library(nbaplotR)
 library(ggplot2)
 
 team_abbr <- nbaplotR::valid_team_names(league = "WNBA")
+team_abbr <- c(team_abbr, rep(NA_character_, 3))
 
 df <- data.frame(
-  a = rep(1:4, 3),
-  b = sort(rep(1:3, 4), decreasing = TRUE),
+  a = rep(1:4, 4),
+  b = sort(rep(1:4, 4), decreasing = TRUE),
   teams = team_abbr
 )
 
@@ -136,7 +137,12 @@ df$colour <- ifelse(matches, NA, "gray")
 # scatterplot of all logos
 ggplot(df, aes(x = a, y = b)) +
   geom_wnba_logos(aes(team_abbr = teams), width = 0.085) +
-  geom_label(aes(label = teams), nudge_y = -0.2, alpha = 0.5, fill = "transparent") +
+  geom_label(
+    aes(label = teams),
+    nudge_y = -0.2,
+    alpha = 0.5,
+    fill = "transparent"
+  ) +
   theme_void()
 
 # apply alpha via an aesthetic from inside the dataset `df`
@@ -144,7 +150,12 @@ ggplot(df, aes(x = a, y = b)) +
 # values in your dataset!
 ggplot(df, aes(x = a, y = b)) +
   geom_wnba_logos(aes(team_abbr = teams, alpha = alpha), width = 0.085) +
-  geom_label(aes(label = teams), nudge_y = -0.2, alpha = 0.5, fill = "transparent") +
+  geom_label(
+    aes(label = teams),
+    nudge_y = -0.2,
+    alpha = 0.5,
+    fill = "transparent"
+  ) +
   scale_alpha_identity() +
   theme_void()
 
@@ -152,8 +163,16 @@ ggplot(df, aes(x = a, y = b)) +
 # please note that you have to add scale_alpha_identity() as well as
 # scale_color_identity() to use the alpha and colour values in your dataset!
 ggplot(df, aes(x = a, y = b)) +
-  geom_wnba_logos(aes(team_abbr = teams, alpha = alpha, colour = colour), width = 0.085) +
-  geom_label(aes(label = teams), nudge_y = -0.2, alpha = 0.5, fill = "transparent") +
+  geom_wnba_logos(
+    aes(team_abbr = teams, alpha = alpha, colour = colour),
+    width = 0.085
+  ) +
+  geom_label(
+    aes(label = teams),
+    nudge_y = -0.2,
+    alpha = 0.5,
+    fill = "transparent"
+  ) +
   scale_alpha_identity() +
   scale_color_identity() +
   theme_void()
@@ -161,7 +180,12 @@ ggplot(df, aes(x = a, y = b)) +
 # apply alpha as constant for all logos
 ggplot(df, aes(x = a, y = b)) +
   geom_wnba_logos(aes(team_abbr = teams), width = 0.085, alpha = 0.6) +
-  geom_label(aes(label = teams), nudge_y = -0.2, alpha = 0.5, fill = "transparent") +
+  geom_label(
+    aes(label = teams),
+    nudge_y = -0.2,
+    alpha = 0.5,
+    fill = "transparent"
+  ) +
   theme_void()
 }
 }
