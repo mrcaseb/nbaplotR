@@ -53,7 +53,7 @@
 #' # scatterplot of all logos
 #' ggplot(df, aes(x = a, y = b)) +
 #'   geom_wnba_logos(aes(team_abbr = teams), width = 0.085) +
-#'   geom_label(aes(label = teams), nudge_y = -0.2, alpha = 0.5) +
+#'   geom_label(aes(label = teams), nudge_y = -0.2, alpha = 0.5, fill = "transparent") +
 #'   theme_void()
 #'
 #' # apply alpha via an aesthetic from inside the dataset `df`
@@ -61,7 +61,7 @@
 #' # values in your dataset!
 #' ggplot(df, aes(x = a, y = b)) +
 #'   geom_wnba_logos(aes(team_abbr = teams, alpha = alpha), width = 0.085) +
-#'   geom_label(aes(label = teams), nudge_y = -0.2, alpha = 0.5) +
+#'   geom_label(aes(label = teams), nudge_y = -0.2, alpha = 0.5, fill = "transparent") +
 #'   scale_alpha_identity() +
 #'   theme_void()
 #'
@@ -70,7 +70,7 @@
 #' # scale_color_identity() to use the alpha and colour values in your dataset!
 #' ggplot(df, aes(x = a, y = b)) +
 #'   geom_wnba_logos(aes(team_abbr = teams, alpha = alpha, colour = colour), width = 0.085) +
-#'   geom_label(aes(label = teams), nudge_y = -0.2, alpha = 0.5) +
+#'   geom_label(aes(label = teams), nudge_y = -0.2, alpha = 0.5, fill = "transparent") +
 #'   scale_alpha_identity() +
 #'   scale_color_identity() +
 #'   theme_void()
@@ -78,9 +78,8 @@
 #' # apply alpha as constant for all logos
 #' ggplot(df, aes(x = a, y = b)) +
 #'   geom_wnba_logos(aes(team_abbr = teams), width = 0.085, alpha = 0.6) +
-#'   geom_label(aes(label = teams), nudge_y = -0.2, alpha = 0.5) +
+#'   geom_label(aes(label = teams), nudge_y = -0.2, alpha = 0.5, fill = "transparent") +
 #'   theme_void()
-#'
 #' }
 geom_wnba_logos <- function(mapping = NULL, data = NULL,
                             stat = "identity", position = "identity",
